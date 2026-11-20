@@ -1,5 +1,5 @@
 # Binaries and build artifacts
-tracelight
+/tracelight
 *.exe
 *.exe~
 *.dll
