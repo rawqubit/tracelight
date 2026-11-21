@@ -1,8 +1,21 @@
 # tracelight
 
+[![CI](https://github.com/rawqubit/tracelight/actions/workflows/ci.yml/badge.svg)](https://github.com/rawqubit/tracelight/actions/workflows/ci.yml) [![release](https://img.shields.io/github/v/release/rawqubit/tracelight?color=ffa53d)](https://github.com/rawqubit/tracelight/releases) [![license](https://img.shields.io/badge/license-MIT-56d3a6)](https://github.com/rawqubit/tracelight/blob/main/LICENSE)
+
 A pure-Go, zero-dependency packet capture reader and flow inspector for `.pcap` and `.pcapng` files.
 
 **What it is and is not:** `tracelight` is a fast offline reader, dissector, and inspector for saved capture files. It is **not** a live packet sniffer (no `libpcap`, no `AF_PACKET`, no cgo, no promiscuous interface capture).
+
+## Install in one line
+
+Prebuilt binaries for Linux, macOS and Windows on amd64 and arm64 — no Go toolchain needed:
+
+```bash
+curl -L https://github.com/rawqubit/tracelight/releases/download/v0.1.0/tracelight_v0.1.0_linux_amd64.tar.gz | tar -xz
+./tracelight demo
+```
+
+macOS: swap `linux_amd64` for `darwin_arm64` (or `darwin_amd64`). Windows: take the `.zip` from [releases](https://github.com/rawqubit/tracelight/releases) and run `tracelight.exe`. Every archive has a SHA-256 in `checksums.txt`. Building from source is one `go build`, and it always works — but it should not be the first thing you have to do.
 
 ## Supported Formats and Protocols
 
